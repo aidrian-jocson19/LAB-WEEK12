@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Demo Page</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #222;
+      background: #f9f9f9;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      border-bottom: 1px solid #ddd;
+      background: white;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .hero {
+      min-height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 24px;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 24px;
+    }
+
+    .card {
+      flex: 1 1 260px;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 16px;
+      flex-grow: 1;
+    }
+
+    .card h2 {
+      margin-top: 0;
+    }
+
+    .card-actions {
+      display: flex;
+      justify-content: flex-end;
+      padding: 16px;
+    }
+
+    button {
+      background: #2575fc;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1a5edb;
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <strong>Flexbox Class</strong>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">Champions</a>
+      <a href="#">Builds</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>League of Legends Champions</h1>
+      <p>Explore some iconic characters using Flexbox layout.</p>
+    </div>
+  </section>
+
+  <section class="cards">
+    
+    <article class="card">
+      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg" alt="Ahri">
+      <div class="card-content">
+        <h2>Ahri</h2>
+        <p>A charming fox mage who manipulates magic and enemies alike.</p>
+      </div>
+      <div class="card-actions">
+        <button>View</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg" alt="Yasuo">
+      <div class="card-content">
+        <h2>Yasuo</h2>
+        <p>A wandering swordsman with the power of the wind.</p>
+      </div>
+      <div class="card-actions">
+        <button>View</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_0.jpg" alt="Jinx">
+      <div class="card-content">
+        <h2>Jinx</h2>
+        <p>An unpredictable marksman who lives for chaos and destruction.</p>
+      </div>
+      <div class="card-actions">
+        <button>View</button>
+      </div>
+    </article>
+
+  </section>
+
+</body>
+</html>
